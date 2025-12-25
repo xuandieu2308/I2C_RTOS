@@ -1,53 +1,161 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C5 | ESP32-C6 | ESP32-C61 | ESP32-H2 | ESP32-H21 | ESP32-H4 | ESP32-P4 | ESP32-S2 | ESP32-S3 | Linux |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | --------- | -------- | --------- | -------- | -------- | -------- | -------- | ----- |
+| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C5 | ESP32-C6 | ESP32-H2 | ESP32-S2 | ESP32-S3 |
+| ----------------- | ----- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
 
-# Hello World Example
+# I2C RTOS Layered Firmware Example
 
-Starts a FreeRTOS task to print "Hello World".
+This project demonstrates an **I2C-based firmware architecture** using **ESP-IDF** and **FreeRTOS**, designed with a **layered firmware structure**.
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+The firmware is organized into clear layers to separate **application logic**, **services**, and **hardware drivers**, improving maintainability and scalability.
 
-## How to use example
+---
 
-Follow detailed instructions provided specifically for this example.
+## Firmware layering architecture
 
-Select the instructions depending on Espressif chip installed on your development board:
+The project is divided into the following layers:
 
-- [ESP32 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/stable/get-started/index.html)
-- [ESP32-S2 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/get-started/index.html)
+Application Layer
+│
+├── app_main.c
+│
+Service Layer
+│
+├── uart_service.c
+│ uart_service.h
+│
+Hardware Layer
+│
+├── ds1307_driver.c
+│ ds1307_driver.h
+├── uart_driver.c
+│ uart_driver.h
+### 1. Application Layer
+- Entry point of the firmware
+- Creates FreeRTOS tasks
+- Calls service-layer APIs
+- Does not access hardware directly
 
+### 2. Service Layer
+- Provides abstraction between application and hardware
+- Manages data flow and communication logic
+- Ensures application is hardware-independent
+
+### 3. Hardware Layer
+- Low-level drivers
+- Directly interfaces with ESP-IDF drivers (I2C, UART)
+- Handles peripheral initialization and raw read/write
+
+---
+
+## How the example works
+
+- The **DS1307 RTC** is connected via I2C
+- I2C initialization and communication are handled in the hardware layer
+- Application layer requests time data through service or driver APIs
+- FreeRTOS ensures tasks run concurrently and safely
+
+---
+
+## Hardware required
+
+- ESP32 development board
+- DS1307 RTC module
+- Jumper wires
+
+### I2C wiring (DS1307)
+
+| Signal | ESP32 GPIO |
+|------|-----------|
+| SDA  | GPIO21 |
+| SCL  | GPIO22 |
+| GND  | GND |
+| VCC  | 3.3V / 5V (module dependent) |
+
+Pull-up resistors are required on SDA and SCL (usually included on DS1307 module).
+
+---
+
+## I2C configuration
+
+- I2C port: I2C_NUM_0
+- Mode: Master
+- Clock speed: 100 kHz
+- SDA pin: GPIO21
+- SCL pin: GPIO22
+
+---
+
+## FreeRTOS usage
+
+- Application tasks are created in `app_main.c`
+- I2C access is isolated in driver layer
+- Architecture allows easy addition of:
+  - Mutex for I2C bus protection
+  - Queues for inter-task communication
+
+---
 
 ## Example folder contents
 
-The project **hello_world** contains one source file in C language [hello_world_main.c](main/hello_world_main.c). The file is located in folder [main](main).
+I2C_RTOS
+├── esp_receiver
+│ ├── app
+│ │ └── app_main.c
+│ ├── hardware
+│ │ ├── uart_driver.c
+│ │ └── uart_driver.h
+│ └── main
+│ └── CMakeLists.txt
+│
+├── esp_sender
+│ ├── app
+│ │ └── app_main.c
+│ ├── hardware
+│ │ ├── ds1307_driver.c
+│ │ ├── ds1307_driver.h
+│ │ ├── uart_driver.c
+│ │ └── uart_driver.h
+│ └── service
+│ ├── uart_service.c
+│ └── uart_service.h
+│
+└── README.md
+---
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt` files that provide set of directives and instructions describing the project's source files and targets (executable, library, or both).
+## How to build and flash
 
-Below is short explanation of remaining files in the project folder.
+```bash
+idf.py set-target esp32
+idf.py build
+idf.py -p PORT flash monitor
+Expected behavior
 
-```
-├── CMakeLists.txt
-├── pytest_hello_world.py      Python script used for automated testing
-├── main
-│   ├── CMakeLists.txt
-│   └── hello_world_main.c
-└── README.md                  This is the file you are currently reading
-```
+I2C is initialized at startup
 
-For more information on structure and contents of ESP-IDF projects, please refer to Section [Build System](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/build-system.html) of the ESP-IDF Programming Guide.
+DS1307 RTC time is read successfully
 
-## Troubleshooting
+Data can be forwarded via UART if required
 
-* Program upload failure
+Clear separation between logic, service, and hardware
 
-    * Hardware connection is not correct: run `idf.py -p PORT monitor`, and reboot your board to see if there are any output logs.
-    * The baud rate for downloading is too high: lower your baud rate in the `menuconfig` menu, and try again.
+Troubleshooting
+I2C device not responding
 
-## Technical support and feedback
+Check SDA/SCL wiring
 
-Please use the following feedback channels:
+Verify DS1307 I2C address (0x68)
 
-* For technical queries, go to the [esp32.com](https://esp32.com/) forum
-* For a feature request or bug report, create a [GitHub issue](https://github.com/espressif/esp-idf/issues)
+Ensure pull-up resistors are present
 
-We will get back to you as soon as possible.
+Try lowering I2C clock speed
+
+Build issues
+
+Check component dependencies in CMakeLists.txt
+
+Ensure correct folder structure is preserved
+
+Technical support and feedback
+
+ESP32 Forum: https://esp32.com/
+
+ESP-IDF Issues: https://github.com/espressif/esp-idf/issues
