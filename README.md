@@ -14,20 +14,17 @@ The firmware is organized into clear layers to separate **application logic**, *
 The project is divided into the following layers:
 
 Application Layer
-│
 ├── app_main.c
-│
+
 Service Layer
-│
 ├── uart_service.c
-│ uart_service.h
-│
-Hardware Layer
-│
+└── uart_service.h
+
+Hardware Driver Layer
 ├── ds1307_driver.c
-│ ds1307_driver.h
+├── ds1307_driver.h
 ├── uart_driver.c
-│ uart_driver.h
+└── uart_driver.h
 ### 1. Application Layer
 - Entry point of the firmware
 - Creates FreeRTOS tasks
@@ -114,12 +111,11 @@ I2C_RTOS
 │ │ ├── ds1307_driver.h
 │ │ ├── uart_driver.c
 │ │ └── uart_driver.h
-│ └── service
-│ ├── uart_service.c
-│ └── uart_service.h
+│ ├── service
+│ │ ├── uart_service.c
+│ │ └── uart_service.h
 │
 └── README.md
----
 
 ## How to build and flash
 
