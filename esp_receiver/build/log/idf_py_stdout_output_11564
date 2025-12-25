@@ -1,0 +1,304 @@
+Command: E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM8 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\I2C_RTOS\esp_receiver\build\esp_receiver.elf E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\I2C_RTOS\esp_receiver\build\bootloader\bootloader.elf --force-color -m 'E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM8'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 28 2025 09:25:35[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ad88h ( 44424) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001adb0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001add8 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d1c8 vaddr=40080000 size=02e50h ( 11856) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=15e50h ( 89680) map[0m
+[0;32mI (153) esp_image: segment 5: paddr=00035e78 vaddr=40082e50 size=0b2f4h ( 45812) load[0m
+[0;32mI (178) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (178) boot: Disabling RNG early entropy source...[0m
+[0;32mI (189) cpu_start: Multicore app[0m
+[0;32mI (197) cpu_start: Pro cpu start user code[0m
+[0;32mI (197) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (197) app_init: Application information:[0m
+[0;32mI (197) app_init: Project name:     esp_receiver[0m
+[0;32mI (201) app_init: App version:      v5.5-dirty[0m
+[0;32mI (206) app_init: Compile time:     Aug 28 2025 09:25:22[0m
+[0;32mI (211) app_init: ELF file SHA256:  ca37282bd...[0m
+[0;32mI (215) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB2CC0 len 0002D340 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008E144 len 00011EBC (71 KiB): IRAM[0m
+[0;33mW (265) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (274) spi_flash: detected chip: generic[0m
+[0;32mI (277) spi_flash: flash io: dio[0m
+[0;33mW (280) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (293) main_task: Started on CPU0[0m
+[0;32mI (303) main_task: Calling app_main()[0m
+[0;32mI (303) main_task: Returned from app_main()[0m
+[1;31mE (403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (1403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (2403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (3403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (4403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (5403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (6403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (7403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (8403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (9403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (10403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (11403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (12403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (13403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (14403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (15403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (16403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (17403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (18403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (19403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (20403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (21403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (22403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (23403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (24403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (25403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (26403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (27403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (28403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (29403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (30403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (31403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (32403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (33403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (34403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (35403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (36403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (37403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (38403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (39403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (40403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (41403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (42403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (43403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (44403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (45403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (46403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (47403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (48403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (49403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (50403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (51403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (52403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (53403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (54403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (55403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (56403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (57403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (58403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (59403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (60403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (61403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (62403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (63403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (64403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (65403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (66403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (67403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+����������������������������������������������������������������68403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161
+[1;31mE (69403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (70403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (71403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (72403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (73403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (74403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (75403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (76403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (77403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (78403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (79403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (80403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (81403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (82403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (83403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (84403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (85403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (86403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (87403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (88403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (89403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (90403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (91403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (92403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (93403) UART: [ERROR] Du lieu UART khong hop le: 161:62:60 40/62/2161[0m
+[1;31mE (94403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/224/0000[0m
+[1;31mE (95403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/240/0063[0m
+[1;31mE (96403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/255/0000[0m
+[1;31mE (97403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 220/00/0000[0m
+[1;31mE (98403) UART: [ERROR] Du lieu UART khong hop le: 00:00:249 00/00/0000[0m
+[1;31mE (99403) UART: [ERROR] Du lieu UART khong hop le: 00:00:252 31/00/0000[0m
+[1;31mE (100403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0480[0m
+[1;31mE (101403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/65504[0m
+[1;31mE (102403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (103403) UART: [ERROR] Du lieu UART khong hop le: 00:253:00 00/00/0000[0m
+[1;31mE (104403) UART: [ERROR] Du lieu UART khong hop le: 00:253:00 00/00/0000[0m
+[1;31mE (105403) UART: [ERROR] Du lieu UART khong hop le: 00:00:254 00/00/0000[0m
+[1;31mE (106403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/254/0000[0m
+[1;31mE (107403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/33016[0m
+[1;31mE (108403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/65024[0m
+[1;31mE (109403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (110403) UART: [ERROR] Du lieu UART khong hop le: 00:250:00 00/00/0000[0m
+[1;31mE (111403) UART: [ERROR] Du lieu UART khong hop le: 16:00:00 00/00/0000[0m
+[1;31mE (112403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (113403) UART: [ERROR] Du lieu UART khong hop le: 00:128:130 00/00/0000[0m
+[1;31mE (114403) UART: [ERROR] Du lieu UART khong hop le: 240:00:00 00/00/0000[0m
+[1;31mE (115403) UART: [ERROR] Du lieu UART khong hop le: 00:252:00 00/00/0000[0m
+[1;31mE (116403) UART: [ERROR] Du lieu UART khong hop le: 00:00:248 00/00/0000[0m
+[1;31mE (117403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (118403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/65024[0m
+[1;31mE (119403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (120403) UART: [ERROR] Du lieu UART khong hop le: 00:240:48 00/00/0000[0m
+[1;31mE (121403) UART: [ERROR] Du lieu UART khong hop le: 00:00:252 00/00/0000[0m
+[1;31mE (122403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 192/00/0000[0m
+[1;31mE (123403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/65280[0m
+[1;31mE (124403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (125403) UART: [ERROR] Du lieu UART khong hop le: 00:128:00 00/00/0000[0m
+[1;31mE (126403) UART: [ERROR] Du lieu UART khong hop le: 00:00:255 00/00/0000[0m
+[1;31mE (127403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 248/00/0000[0m
+[1;31mE (128403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 255/36/0000[0m
+[1;31mE (129403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/33023[0m
+[1;31mE (130403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/48128[0m
+[1;31mE (131403) UART: [ERROR] Du lieu UART khong hop le: 01:00:00 00/00/0000[0m
+[1;31mE (132403) UART: [ERROR] Du lieu UART khong hop le: 00:240:00 00/00/0000[0m
+[1;31mE (133403) UART: [ERROR] Du lieu UART khong hop le: 00:00:255 00/00/0000[0m
+[1;31mE (134403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 252/00/0000[0m
+[1;31mE (135403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (136403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (137403) UART: [ERROR] Du lieu UART khong hop le: 252:04:00 00/00/0000[0m
+[1;31mE (138403) UART: [ERROR] Du lieu UART khong hop le: 00:252:00 00/00/0000[0m
+[1;31mE (139403) UART: [ERROR] Du lieu UART khong hop le: 00:00:224 00/00/0000[0m
+[1;31mE (140403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 127/00/0000[0m
+[1;31mE (141403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0130[0m
+[1;31mE (142403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/65280[0m
+[1;31mE (143403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (144403) UART: [ERROR] Du lieu UART khong hop le: 240:00:00 00/00/0000[0m
+[1;31mE (145403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 254/01/0000[0m
+[1;31mE (146403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0254[0m
+[1;31mE (147403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (148403) UART: [ERROR] Du lieu UART khong hop le: 240:00:00 00/00/0000[0m
+[1;31mE (149403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (150403) UART: [ERROR] Du lieu UART khong hop le: 00:00:192 00/00/0000[0m
+[1;31mE (151403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 224/00/0000[0m
+[1;31mE (152403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0400[0m
+[1;31mE (153403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (154403) UART: [ERROR] Du lieu UART khong hop le: 00:192:00 00/00/0000[0m
+[1;31mE (155403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 252/00/0000[0m
+[1;31mE (156403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (157403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/255/0000[0m
+[1;31mE (158403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/61440[0m
+[1;31mE (159403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (160403) UART: [ERROR] Du lieu UART khong hop le: 00:252:00 00/00/0000[0m
+[1;31mE (161403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/254/0000[0m
+[1;31mE (162403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/65280[0m
+[1;31mE (163403) UART: [ERROR] Du lieu UART khong hop le: 01:00:00 00/00/0000[0m
+[1;31mE (164403) UART: [ERROR] Du lieu UART khong hop le: 160:00:00 00/00/0000[0m
+[1;31mE (165403) UART: [ERROR] Du lieu UART khong hop le: 00:128:04 00/00/0000[0m
+[1;31mE (166403) UART: [ERROR] Du lieu UART khong hop le: 00:00:32 236/00/0000[0m
+[1;31mE (167403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/252/0000[0m
+[1;31mE (168403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (169403) UART: [ERROR] Du lieu UART khong hop le: 252:255:127 00/00/0000[0m
+[1;31mE (170403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/254/0005[0m
+[1;31mE (171403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/64512[0m
+[1;31mE (172403) UART: [ERROR] Du lieu UART khong hop le: 01:00:00 00/00/65024[0m
+[1;31mE (173403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/1024[0m
+[1;31mE (174403) UART: [ERROR] Du lieu UART khong hop le: 208:00:00 00/00/0000[0m
+[1;31mE (175403) UART: [ERROR] Du lieu UART khong hop le: 00:00:224 00/00/0000[0m
+[1;31mE (176403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 224/255/0000[0m
+[1;31mE (177403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0236[0m
+[1;31mE (178403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/49152[0m
+[1;31mE (179403) UART: [ERROR] Du lieu UART khong hop le: 228:00:02 00/00/0000[0m
+[1;31mE (180403) UART: [ERROR] Du lieu UART khong hop le: 00:253:255 00/00/0000[0m
+[1;31mE (181403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0240[0m
+[1;31mE (182403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/59392[0m
+[1;31mE (183403) UART: [ERROR] Du lieu UART khong hop le: 64:00:00 00/00/0192[0m
+[1;31mE (184403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/63488[0m
+[1;31mE (185403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (186403) UART: [ERROR] Du lieu UART khong hop le: 00:254:31 00/00/0000[0m
+[1;31mE (187403) UART: [ERROR] Du lieu UART khong hop le: 00:00:128 00/00/0000[0m
+[1;31mE (188403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 240/04/0000[0m
+[1;31mE (189403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 128/255/0004[0m
+[1;31mE (190403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/64/0037[0m
+[1;31mE (191403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/192/0000[0m
+[1;31mE (192403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/128/0000[0m
+[1;31mE (193403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (194403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/32800[0m
+[1;31mE (195403) UART: [ERROR] Du lieu UART khong hop le: 255:04:00 00/00/0000[0m
+[1;31mE (196403) UART: [ERROR] Du lieu UART khong hop le: 00:255:144 00/00/0000[0m
+[1;31mE (197403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 254/128/0000[0m
+[1;31mE (198403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0254[0m
+[1;31mE (199403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/32768[0m
+[1;31mE (200403) UART: [ERROR] Du lieu UART khong hop le: 01:00:00 00/00/0000[0m
+[1;31mE (201403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/63488[0m
+[1;31mE (202403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/61440[0m
+[1;31mE (203403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (204403) UART: [ERROR] Du lieu UART khong hop le: 15:00:00 00/00/0000[0m
+[1;31mE (205403) UART: [ERROR] Du lieu UART khong hop le: 248:00:00 00/00/0000[0m
+[1;31mE (206403) UART: [ERROR] Du lieu UART khong hop le: 00:252:02 00/00/0000[0m
+[1;31mE (207403) UART: [ERROR] Du lieu UART khong hop le: 248:00:00 00/00/0000[0m
+[1;31mE (208403) UART: [ERROR] Du lieu UART khong hop le: 00:00:254 00/00/0000[0m
+[1;31mE (209403) UART: [ERROR] Du lieu UART khong hop le: 00:00:128 00/00/0000[0m
+[1;31mE (210403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 254/00/0000[0m
+[1;31mE (211403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/224/0001[0m
+[1;31mE (212403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/248/0001[0m
+[1;31mE (213403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/65024[0m
+[1;31mE (214403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (215403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/32768[0m
+[1;31mE (216403) UART: [ERROR] Du lieu UART khong hop le: 255:00:00 00/00/0000[0m
+[1;31mE (217403) UART: [ERROR] Du lieu UART khong hop le: 00:236:255 18/00/0000[0m
+[1;31mE (218403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 254/00/0000[0m
+[1;31mE (219403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 252/00/0000[0m
+[1;31mE (220403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/01/0000[0m
+[1;31mE (221403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/252/0000[0m
+[1;31mE (222403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (223403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/224/0000[0m
+[1;31mE (224403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/65408[0m
+[1;31mE (225403) UART: [ERROR] Du lieu UART khong hop le: 20:00:00 00/00/48896[0m
+[1;31mE (226403) UART: [ERROR] Du lieu UART khong hop le: 36:00:00 00/00/64512[0m
+[1;31mE (227403) UART: [ERROR] Du lieu UART khong hop le: 01:00:00 00/00/0000[0m
+[1;31mE (228403) UART: [ERROR] Du lieu UART khong hop le: 128:37:00 00/00/0000[0m
+[1;31mE (229403) UART: [ERROR] Du lieu UART khong hop le: 244:00:00 00/00/32768[0m
+[1;31mE (230403) UART: [ERROR] Du lieu UART khong hop le: 240:01:00 00/00/0000[0m
+[1;31mE (231403) UART: [ERROR] Du lieu UART khong hop le: 254:01:00 00/00/65472[0m
+[1;31mE (232403) UART: [ERROR] Du lieu UART khong hop le: 16:00:00 00/00/32768[0m
+[1;31mE (233403) UART: [ERROR] Du lieu UART khong hop le: 02:00:00 00/00/1024[0m
+[1;31mE (234403) UART: [ERROR] Du lieu UART khong hop le: 224:01:00 00/00/0000[0m
+[1;31mE (235403) UART: [ERROR] Du lieu UART khong hop le: 128:64:00 00/00/0000[0m
+[1;31mE (236403) UART: [ERROR] Du lieu UART khong hop le: 00:255:09 00/00/0000[0m
+[1;31mE (237403) UART: [ERROR] Du lieu UART khong hop le: 00:240:64 00/00/0000[0m
+[1;31mE (238403) UART: [ERROR] Du lieu UART khong hop le: 128:00:00 00/00/0000[0m
+[1;31mE (239403) UART: [ERROR] Du lieu UART khong hop le: 00:254:00 00/00/0000[0m
+[1;31mE (240403) UART: [ERROR] Du lieu UART khong hop le: 00:254:00 00/00/0000[0m
+[1;31mE (241403) UART: [ERROR] Du lieu UART khong hop le: 240:32:00 00/00/0000[0m
+[1;31mE (242403) UART: [ERROR] Du lieu UART khong hop le: 128:00:00 00/00/49152[0m
+[1;31mE (243403) UART: [ERROR] Du lieu UART khong hop le: 00:00:00 00/00/0000[0m
+[1;31mE (244403) UART: [ERROR] Du lieu UART khong hop le: 255:00:00 00/00/0248[0m

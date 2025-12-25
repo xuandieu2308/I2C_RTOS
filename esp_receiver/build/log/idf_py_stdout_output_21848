@@ -1,0 +1,152 @@
+Command: E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM10 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\I2C_RTOS\esp_receiver\build\esp_receiver.elf E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\I2C_RTOS\esp_receiver\build\bootloader\bootloader.elf --force-color -m 'E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM10'
+ SPI Speed      : 40MHz
+[0;32mI (37) boot.esp32�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 28 2025 09:25:35[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ad38h ( 44344) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001ad60 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001ad88 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d178 vaddr=40080000 size=02ea0h ( 11936) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=15df4h ( 89588) map[0m
+[0;32mI (153) esp_image: segment 5: paddr=00035e1c vaddr=40082ea0 size=0b2a4h ( 45732) load[0m
+[0;32mI (178) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (178) boot: Disabling RNG early entropy source...[0m
+[0;32mI (189) cpu_start: Multicore app[0m
+[0;32mI (197) cpu_start: Pro cpu start user code[0m
+[0;32mI (197) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (197) app_init: Application information:[0m
+[0;32mI (197) app_init: Project name:     esp_receiver[0m
+[0;32mI (201) app_init: App version:      8213ca6-dirty[0m
+[0;32mI (206) app_init: Compile time:     Sep  7 2025 22:54:21[0m
+[0;32mI (211) app_init: ELF file SHA256:  1b4ee17d6...[0m
+[0;32mI (215) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB2CC0 len 0002D340 (180 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 4008E144 len 00011EBC (71 KiB): IRAM[0m
+[0;33mW (265) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (274) spi_flash: detected chip: generic[0m
+[0;32mI (278) spi_flash: flash io: dio[0m
+[0;33mW (281) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (293) main_task: Started on CPU0[0m
+[0;32mI (303) main_task: Calling app_main()[0m
+[0;32mI (303) main_task: Returned from app_main()[0m
+[0;32mI (1303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (3303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (5303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (7303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (9303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (11303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (13303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (15303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (17303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (19303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (21303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (23303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (25303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (27303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (29303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (31303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (33303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (34303) RECV: Raw: 251 128 00 04 00 00 00[0m
+[0;32mI (35303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (36303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (37303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (38303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (39303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (40303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (41303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (42303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (43303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (44303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (45303) RECV: Raw: 00 00 00 00 00 04 00[0m
+[0;32mI (46303) RECV: Raw: 00 26 249 223 255 255 255[0m
+[0;32mI (47303) RECV: Raw: 01 04 00 00 00 00 00[0m
+[0;32mI (48303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (49303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (51303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (53303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (55303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (57303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (59303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (61303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (63303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (65303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (67303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (68303) RECV: Raw: 255 00 128 00 00 00 00[0m
+[0;32mI (69303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (70303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (71303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (72303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (73303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (74303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (75303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (76303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (77303) RECV: Raw: 00 00 00 00 00 04 242[0m
+[0;32mI (78303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (79303) RECV: Raw: 00 00 00 00 00 31 00[0m
+[0;32mI (80303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (81303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (83303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (85303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (87303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (89303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (91303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (93303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (95303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (97303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (99303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (101303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (103303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (105303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (107303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (109303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (111303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (113303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (115303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (117303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (119303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (121303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (123303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (125303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (127303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (129303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (131303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (133303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (135303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (137303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (139303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (141303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (143303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (145303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (147303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (149303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (151303) RECV: Raw: 00 00 00 00 00 00 00[0m
+[0;32mI (153303) RECV: Raw: 00 00 00 00 00 00 00[0m

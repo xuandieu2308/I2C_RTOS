@@ -1,0 +1,2 @@
+Command: ninja all
+ninja: error: 'E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/I2C_RTOS/esp_sender/service/uart_service.c', needed by 'esp-idf/main/CMakeFiles/__idf_main.dir/__/service/uart_service.c.obj', missing and no known rule to make it

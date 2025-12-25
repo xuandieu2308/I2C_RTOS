@@ -1,0 +1,463 @@
+Command: E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM8 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\I2C_RTOS\esp_receiver\build\esp_receiver.elf E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\I2C_RTOS\esp_receiver\build\bootloader\bootloader.elf --force-color -m 'E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM8'
+�
+������     : 40MH�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 28 2025 09:25:35[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09a90h ( 39568) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=00019ab8 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (102) esp_image: segment 2: paddr=00019ae0 vaddr=3ffb0000 size=023b8h (  9144) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001bea0 vaddr=40080000 size=04178h ( 16760) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=13608h ( 79368) map[0m
+[0;32mI (148) esp_image: segment 5: paddr=00033630 vaddr=40084178 size=08ef8h ( 36600) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (179) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp_receiver[0m
+[0;32mI (192) app_init: App version:      v5.5-dirty[0m
+[0;32mI (196) app_init: Compile time:     Aug 28 2025 09:25:22[0m
+[0;32mI (201) app_init: ELF file SHA256:  a4db15bcb...[0m
+[0;32mI (206) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (210) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (214) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (218) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (222) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (228) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (233) heap_init: At 3FFB2C88 len 0002D378 (180 KiB): DRAM[0m
+[0;32mI (238) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (244) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (249) heap_init: At 4008D070 len 00012F90 (75 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (258) spi_flash: flash io: dio[0m
+[0;33mW (261) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (274) main_task: Started on CPU0[0m
+[0;32mI (284) main_task: Calling app_main()[0m
+[1;31mE (284) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (284) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+[1;31mE (284) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[0;32mI (294) main_task: Returned from app_main()[0m
+[1;31mE (1294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (1294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (2294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (2294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (3294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (3294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (4294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (4294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (5294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (5294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (6294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (6294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (7294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (7294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (8294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (8294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (9294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (9294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (10294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (10294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (11294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (11294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (12294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (12294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (13294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (13294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (14294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (14294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (15294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (15294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (16294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (16294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (17294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (17294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (18294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (18294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (19294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (19294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (20294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (20294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (21294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (21294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (22294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (22294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (23294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (23294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (24294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (24294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (25294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (25294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (26294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (26294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (27294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (27294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (28294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (28294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (29294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (29294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (30294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (30294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (31294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (31294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (32294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (32294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (33294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (33294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (34294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (34294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (35294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (35294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (36294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (36294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (37294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (37294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (38294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (38294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (39294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (39294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (40294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (40294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (41294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (41294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (42294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (42294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (43294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (43294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (44294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (44294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (45294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (45294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (46294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (46294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (47294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (47294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (48294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (48294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (49294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (49294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (50294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (50294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (51294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (51294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (52294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (52294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (53294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (53294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (54294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (54294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (55294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (55294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (56294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (56294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (57294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (57294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (58294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (58294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (59294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (59294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (60294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (60294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (61294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (61294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (62294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (62294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (63294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (63294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (64294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (64294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (65294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (65294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (66294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (66294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (67294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (67294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (68294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (68294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (69294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (69294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (70294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (70294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (71294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (71294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (72294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (72294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (73294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (73294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (74294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (74294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (75294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (75294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (76294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (76294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (77294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (77294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (78294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (78294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (79294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (79294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (80294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (80294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (81294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (81294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (82294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (82294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (83294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (83294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (84294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (84294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (85294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (85294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (86294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (86294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (87294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (87294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (88294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (88294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (89294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (89294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (90294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (90294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (91294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (91294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (92294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (92294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (93294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (93294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (94294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (94294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (95294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (95294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (96294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (96294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (97294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (97294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (98294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (98294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (99294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (99294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (100294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (100294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (101294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (101294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (102294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (102294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (103294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (103294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (104294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (104294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (105294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (105294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (106294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (106294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (107294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (107294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (108294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (108294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (109294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (109294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (110294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (110294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (111294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (111294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (112294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (112294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (113294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (113294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (114294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (114294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (115294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (115294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (116294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (116294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (117294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (117294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (118294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (118294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (119294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (119294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (120294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (120294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (121294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (121294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (122294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (122294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (123294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (123294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (124294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (124294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (125294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (125294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (126294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (126294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (127294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (127294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (128294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (128294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (129294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (129294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (130294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (130294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (131294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (131294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (132294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (132294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[1;31mE (133294) uart: uart_read_bytes(1621): uart driver error[0m
+[0;32mI (133294) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000

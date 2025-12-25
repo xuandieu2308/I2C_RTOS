@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "esp_flash.h": "c",
+        "uart_driver.h": "c",
+        "uart_service.h": "c"
+    },
+    "idf.pythonInstallPath": "E:\\ESP32_NEWBIE\\Espressif\\tools\\idf-python\\3.11.2\\python.exe"
+}

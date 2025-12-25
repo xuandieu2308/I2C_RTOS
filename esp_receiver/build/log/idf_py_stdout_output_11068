@@ -1,0 +1,476 @@
+Command: E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM8 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\I2C_RTOS\esp_receiver\build\esp_receiver.elf E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\I2C_RTOS\esp_receiver\build\bootloader\bootloader.elf --force-color -m 'E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM8'
+'�A%�Speed      : 4�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 28 2025 09:25:35[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ad28h ( 44328) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001ad50 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001ad78 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d168 vaddr=40080000 size=02eb0h ( 11952) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=15d4ch ( 89420) map[0m
+[0;32mI (153) esp_image: segment 5: paddr=00035d74 vaddr=40082eb0 size=0b1a0h ( 45472) load[0m
+[0;32mI (178) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (178) boot: Disabling RNG early entropy source...[0m
+[0;32mI (188) cpu_start: Multicore app[0m
+[0;32mI (197) cpu_start: Pro cpu start user code[0m
+[0;32mI (197) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (197) app_init: Application information:[0m
+[0;32mI (197) app_init: Project name:     esp_receiver[0m
+[0;32mI (201) app_init: App version:      v5.5-dirty[0m
+[0;32mI (205) app_init: Compile time:     Aug 28 2025 09:25:22[0m
+[0;32mI (210) app_init: ELF file SHA256:  6e94d0ac7...[0m
+[0;32mI (215) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB2CC0 len 0002D340 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008E050 len 00011FB0 (71 KiB): IRAM[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (267) spi_flash: flash io: dio[0m
+[0;33mW (270) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (293) main_task: Calling app_main()[0m
+[0;32mI (763) TIME: Time: 14:27:26 Date: 28/08/2025[0m
+[0;32mI (773) main_task: Returned from app_main()[0m
+[0;32mI (1763) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+[0;32mI (1773) TIME: Time: 00:00:00 Date: 00/00/0000[0m
+[0;32mI (2773) TIME: Time: 14:27:27 Date: 28/08/2025[0m
+[0;32mI (3773) TIME: Time: 14:27:28 Date: 28/08/2025[0m
+[0;32mI (4773) TIME: Time: 14:27:29 Date: 28/08/2025[0m
+[0;32mI (5773) TIME: Time: 14:27:30 Date: 28/08/2025[0m
+[0;32mI (6773) TIME: Time: 14:27:31 Date: 28/08/2025[0m
+[0;32mI (7773) TIME: Time: 14:27:32 Date: 28/08/2025[0m
+[0;32mI (8773) TIME: Time: 14:27:33 Date: 28/08/2025[0m
+[0;32mI (9773) TIME: Time: 14:27:34 Date: 28/08/2025[0m
+[0;32mI (10773) TIME: Time: 14:27:35 Date: 28/08/2025[0m
+[0;32mI (11773) TIME: Time: 14:27:36 Date: 28/08/2025[0m
+[0;32mI (12773) TIME: Time: 14:27:37 Date: 28/08/2025[0m
+[0;32mI (13773) TIME: Time: 14:27:38 Date: 28/08/2025[0m
+[0;32mI (14773) TIME: Time: 14:27:39 Date: 28/08/2025[0m
+[0;32mI (15773) TIME: Time: 14:27:40 Date: 28/08/2025[0m
+[0;32mI (16773) TIME: Time: 14:27:41 Date: 28/08/2025[0m
+[0;32mI (17773) TIME: Time: 14:27:42 Date: 28/08/2025[0m
+[0;32mI (18773) TIME: Time: 14:27:43 Date: 28/08/2025[0m
+[0;32mI (19773) TIME: Time: 14:27:44 Date: 28/08/2025[0m
+[0;32mI (20773) TIME: Time: 14:27:45 Date: 28/08/2025[0m
+[0;32mI (21773) TIME: Time: 14:27:46 Date: 28/08/2025[0m
+[0;32mI (22773) TIME: Time: 14:27:47 Date: 28/08/2025[0m
+[0;32mI (23773) TIME: Time: 14:27:48 Date: 28/08/2025[0m
+[0;32mI (24773) TIME: Time: 14:27:49 Date: 28/08/2025[0m
+[0;32mI (25773) TIME: Time: 14:27:50 Date: 28/08/2025[0m
+[0;32mI (26773) TIME: Time: 14:27:51 Date: 28/08/2025[0m
+[0;32mI (27773) TIME: Time: 14:27:52 Date: 28/08/2025[0m
+[0;32mI (28773) TIME: Time: 14:27:53 Date: 28/08/2025[0m
+[0;32mI (29773) TIME: Time: 14:27:54 Date: 28/08/2025[0m
+[0;32mI (30773) TIME: Time: 14:27:55 Date: 28/08/2025[0m
+[0;32mI (31773) TIME: Time: 14:27:56 Date: 28/08/2025[0m
+[0;32mI (32773) TIME: Time: 14:27:57 Date: 28/08/2025[0m
+[0;32mI (33773) TIME: Time: 14:27:58 Date: 28/08/2025[0m
+[0;32mI (34773) TIME: Time: 14:27:59 Date: 28/08/2025[0m
+[0;32mI (35773) TIME: Time: 14:28:00 Date: 28/08/2025[0m
+[0;32mI (36773) TIME: Time: 14:28:01 Date: 28/08/2025[0m
+[0;32mI (37773) TIME: Time: 14:28:02 Date: 28/08/2025[0m
+[0;32mI (38773) TIME: Time: 14:28:03 Date: 28/08/2025[0m
+[0;32mI (39773) TIME: Time: 14:28:04 Date: 28/08/2025[0m
+[0;32mI (40773) TIME: Time: 14:28:05 Date: 28/08/2025[0m
+[0;32mI (41773) TIME: Time: 14:28:06 Date: 28/08/2025[0m
+[0;32mI (42773) TIME: Time: 14:28:07 Date: 28/08/2025[0m
+[0;32mI (43773) TIME: Time: 14:28:08 Date: 28/08/2025[0m
+[0;32mI (44773) TIME: Time: 14:28:09 Date: 28/08/2025[0m
+[0;32mI (45773) TIME: Time: 14:28:10 Date: 28/08/2025[0m
+[0;32mI (46773) TIME: Time: 14:28:11 Date: 28/08/2025[0m
+[0;32mI (47773) TIME: Time: 14:28:12 Date: 28/08/2025[0m
+[0;32mI (48773) TIME: Time: 14:28:13 Date: 28/08/2025[0m
+[0;32mI (49773) TIME: Time: 14:28:14 Date: 28/08/2025[0m
+[0;32mI (50773) TIME: Time: 14:28:15 Date: 28/08/2025[0m
+[0;32mI (51773) TIME: Time: 14:28:16 Date: 28/08/2025[0m
+[0;32mI (52773) TIME: Time: 14:28:17 Date: 28/08/2025[0m
+[0;32mI (53773) TIME: Time: 14:28:18 Date: 28/08/2025[0m
+[0;32mI (54773) TIME: Time: 14:28:19 Date: 28/08/2025[0m
+[0;32mI (55773) TIME: Time: 14:28:20 Date: 28/08/2025[0m
+[0;32mI (56773) TIME: Time: 14:28:21 Date: 28/08/2025[0m
+[0;32mI (57773) TIME: Time: 14:28:22 Date: 28/08/2025[0m
+[0;32mI (58773) TIME: Time: 14:28:23 Date: 28/08/2025[0m
+[0;32mI (59773) TIME: Time: 14:28:24 Date: 28/08/2025[0m
+[0;32mI (60773) TIME: Time: 14:28:25 Date: 28/08/2025[0m
+[0;32mI (61773) TIME: Time: 14:28:26 Date: 28/08/2025[0m
+[0;32mI (62773) TIME: Time: 14:28:27 Date: 28/08/2025[0m
+[0;32mI (63773) TIME: Time: 14:28:28 Date: 28/08/2025[0m
+[0;32mI (64773) TIME: Time: 14:28:29 Date: 28/08/2025[0m
+[0;32mI (65773) TIME: Time: 14:28:30 Date: 28/08/2025[0m
+[0;32mI (66773) TIME: Time: 14:28:31 Date: 28/08/2025[0m
+[0;32mI (67773) TIME: Time: 14:28:32 Date: 28/08/2025[0m
+[0;32mI (68773) TIME: Time: 14:28:33 Date: 28/08/2025[0m
+[0;32mI (69773) TIME: Time: 14:28:34 Date: 28/08/2025[0m
+[0;32mI (70773) TIME: Time: 14:28:35 Date: 28/08/2025[0m
+[0;32mI (71773) TIME: Time: 14:28:36 Date: 28/08/2025[0m
+[0;32mI (72773) TIME: Time: 14:28:37 Date: 28/08/2025[0m
+[0;32mI (73773) TIME: Time: 14:28:38 Date: 28/08/2025[0m
+[0;32mI (74773) TIME: Time: 14:28:39 Date: 28/08/2025[0m
+[0;32mI (75773) TIME: Time: 14:28:40 Date: 28/08/2025[0m
+[0;32mI (76773) TIME: Time: 14:28:41 Date: 28/08/2025[0m
+[0;32mI (77773) TIME: Time: 14:28:42 Date: 28/08/2025[0m
+[0;32mI (78773) TIME: Time: 14:28:43 Date: 28/08/2025[0m
+[0;32mI (79773) TIME: Time: 14:28:44 Date: 28/08/2025[0m
+[0;32mI (80773) TIME: Time: 14:28:45 Date: 28/08/2025[0m
+[0;32mI (81773) TIME: Time: 14:28:46 Date: 28/08/2025[0m
+[0;32mI (82773) TIME: Time: 14:28:47 Date: 28/08/2025[0m
+[0;32mI (83773) TIME: Time: 14:28:48 Date: 28/08/2025[0m
+[0;32mI (84773) TIME: Time: 14:28:49 Date: 28/08/2025[0m
+[0;32mI (85773) TIME: Time: 14:28:50 Date: 28/08/2025[0m
+[0;32mI (86773) TIME: Time: 14:28:51 Date: 28/08/2025[0m
+[0;32mI (87773) TIME: Time: 14:28:52 Date: 28/08/2025[0m
+[0;32mI (88773) TIME: Time: 14:28:53 Date: 28/08/2025[0m
+[0;32mI (89773) TIME: Time: 14:28:54 Date: 28/08/2025[0m
+[0;32mI (90773) TIME: Time: 14:28:55 Date: 28/08/2025[0m
+[0;32mI (91773) TIME: Time: 14:28:56 Date: 28/08/2025[0m
+[0;32mI (92773) TIME: Time: 14:28:57 Date: 28/08/2025[0m
+[0;32mI (93773) TIME: Time: 14:28:58 Date: 28/08/2025[0m
+[0;32mI (94773) TIME: Time: 14:28:59 Date: 28/08/2025[0m
+[0;32mI (95773) TIME: Time: 14:29:00 Date: 28/08/2025[0m
+[0;32mI (96773) TIME: Time: 14:29:01 Date: 28/08/2025[0m
+[0;32mI (97773) TIME: Time: 14:29:02 Date: 28/08/2025[0m
+[0;32mI (98773) TIME: Time: 14:29:03 Date: 28/08/2025[0m
+[0;32mI (99773) TIME: Time: 14:29:04 Date: 28/08/2025[0m
+[0;32mI (100773) TIME: Time: 14:29:05 Date: 28/08/2025[0m
+[0;32mI (101773) TIME: Time: 14:29:06 Date: 28/08/2025[0m
+[0;32mI (102773) TIME: Time: 14:29:07 Date: 28/08/2025[0m
+[0;32mI (103773) TIME: Time: 14:29:08 Date: 28/08/2025[0m
+[0;32mI (104773) TIME: Time: 14:29:09 Date: 28/08/2025[0m
+[0;32mI (105773) TIME: Time: 14:29:10 Date: 28/08/2025[0m
+[0;32mI (106773) TIME: Time: 14:29:11 Date: 28/08/2025[0m
+[0;32mI (107773) TIME: Time: 14:29:12 Date: 28/08/2025[0m
+[0;32mI (108773) TIME: Time: 14:29:13 Date: 28/08/2025[0m
+[0;32mI (109773) TIME: Time: 14:29:14 Date: 28/08/2025[0m
+[0;32mI (110773) TIME: Time: 14:29:15 Date: 28/08/2025[0m
+[0;32mI (111773) TIME: Time: 14:29:16 Date: 28/08/2025[0m
+[0;32mI (112773) TIME: Time: 14:29:17 Date: 28/08/2025[0m
+[0;32mI (113773) TIME: Time: 14:29:18 Date: 28/08/2025[0m
+[0;32mI (114773) TIME: Time: 14:29:19 Date: 28/08/2025[0m
+[0;32mI (115773) TIME: Time: 14:29:20 Date: 28/08/2025[0m
+[0;32mI (116773) TIME: Time: 14:29:21 Date: 28/08/2025[0m
+[0;32mI (117773) TIME: Time: 14:29:22 Date: 28/08/2025[0m
+[0;32mI (118773) TIME: Time: 14:29:23 Date: 28/08/2025[0m
+[0;32mI (119773) TIME: Time: 14:29:24 Date: 28/08/2025[0m
+[0;32mI (120773) TIME: Time: 14:29:25 Date: 28/08/2025[0m
+[0;32mI (121773) TIME: Time: 14:29:26 Date: 28/08/2025[0m
+[0;32mI (122773) TIME: Time: 14:29:27 Date: 28/08/2025[0m
+[0;32mI (123773) TIME: Time: 14:29:28 Date: 28/08/2025[0m
+[0;32mI (124773) TIME: Time: 14:29:29 Date: 28/08/2025[0m
+[0;32mI (125773) TIME: Time: 14:29:30 Date: 28/08/2025[0m
+[0;32mI (126773) TIME: Time: 14:29:31 Date: 28/08/2025[0m
+[0;32mI (127773) TIME: Time: 14:29:32 Date: 28/08/2025[0m
+[0;32mI (128773) TIME: Time: 14:29:33 Date: 28/08/2025[0m
+[0;32mI (129773) TIME: Time: 14:29:34 Date: 28/08/2025[0m
+[0;32mI (130773) TIME: Time: 14:29:35 Date: 28/08/2025[0m
+[0;32mI (131773) TIME: Time: 14:29:36 Date: 28/08/2025[0m
+[0;32mI (132773) TIME: Time: 14:29:37 Date: 28/08/2025[0m
+[0;32mI (133773) TIME: Time: 14:29:38 Date: 28/08/2025[0m
+[0;32mI (134773) TIME: Time: 14:29:39 Date: 28/08/2025[0m
+[0;32mI (135773) TIME: Time: 14:29:40 Date: 28/08/2025[0m
+[0;32mI (136773) TIME: Time: 14:29:41 Date: 28/08/2025[0m
+[0;32mI (137773) TIME: Time: 14:29:42 Date: 28/08/2025[0m
+[0;32mI (138773) TIME: Time: 14:29:43 Date: 28/08/2025[0m
+[0;32mI (139773) TIME: Time: 14:29:44 Date: 28/08/2025[0m
+[0;32mI (140773) TIME: Time: 14:29:45 Date: 28/08/2025[0m
+[0;32mI (141773) TIME: Time: 14:29:46 Date: 28/08/2025[0m
+[0;32mI (142773) TIME: Time: 14:29:47 Date: 28/08/2025[0m
+[0;32mI (143773) TIME: Time: 14:29:48 Date: 28/08/2025[0m
+[0;32mI (144773) TIME: Time: 14:29:49 Date: 28/08/2025[0m
+[0;32mI (145773) TIME: Time: 14:29:50 Date: 28/08/2025[0m
+[0;32mI (146773) TIME: Time: 14:29:51 Date: 28/08/2025[0m
+[0;32mI (147773) TIME: Time: 14:29:52 Date: 28/08/2025[0m
+[0;32mI (148773) TIME: Time: 14:29:53 Date: 28/08/2025[0m
+[0;32mI (149773) TIME: Time: 14:29:54 Date: 28/08/2025[0m
+[0;32mI (150773) TIME: Time: 14:29:55 Date: 28/08/2025[0m
+[0;32mI (151773) TIME: Time: 14:29:56 Date: 28/08/2025[0m
+[0;32mI (152773) TIME: Time: 14:29:57 Date: 28/08/2025[0m
+[0;32mI (153773) TIME: Time: 14:29:58 Date: 28/08/2025[0m
+[0;32mI (154773) TIME: Time: 14:29:59 Date: 28/08/2025[0m
+[0;32mI (155773) TIME: Time: 14:30:00 Date: 28/08/2025[0m
+[0;32mI (156773) TIME: Time: 14:30:01 Date: 28/08/2025[0m
+[0;32mI (157773) TIME: Time: 14:30:02 Date: 28/08/2025[0m
+[0;32mI (158773) TIME: Time: 14:30:03 Date: 28/08/2025[0m
+[0;32mI (159773) TIME: Time: 14:30:04 Date: 28/08/2025[0m
+[0;32mI (160773) TIME: Time: 14:30:05 Date: 28/08/2025[0m
+[0;32mI (161773) TIME: Time: 14:30:06 Date: 28/08/2025[0m
+[0;32mI (162773) TIME: Time: 14:30:07 Date: 28/08/2025[0m
+[0;32mI (163773) TIME: Time: 14:30:08 Date: 28/08/2025[0m
+[0;32mI (164773) TIME: Time: 14:30:09 Date: 28/08/2025[0m
+[0;32mI (165773) TIME: Time: 14:30:10 Date: 28/08/2025[0m
+[0;32mI (166773) TIME: Time: 14:30:11 Date: 28/08/2025[0m
+[0;32mI (167773) TIME: Time: 14:30:12 Date: 28/08/2025[0m
+[0;32mI (168773) TIME: Time: 14:30:13 Date: 28/08/2025[0m
+[0;32mI (169773) TIME: Time: 14:30:14 Date: 28/08/2025[0m
+[0;32mI (170773) TIME: Time: 14:30:15 Date: 28/08/2025[0m
+[0;32mI (171773) TIME: Time: 14:30:16 Date: 28/08/2025[0m
+[0;32mI (172773) TIME: Time: 14:30:17 Date: 28/08/2025[0m
+[0;32mI (173773) TIME: Time: 14:30:18 Date: 28/08/2025[0m
+[0;32mI (174773) TIME: Time: 14:30:19 Date: 28/08/2025[0m
+[0;32mI (175773) TIME: Time: 14:30:20 Date: 28/08/2025[0m
+[0;32mI (176773) TIME: Time: 14:30:21 Date: 28/08/2025[0m
+[0;32mI (177773) TIME: Time: 14:30:22 Date: 28/08/2025[0m
+[0;32mI (178773) TIME: Time: 14:30:23 Date: 28/08/2025[0m
+[0;32mI (179773) TIME: Time: 14:30:24 Date: 28/08/2025[0m
+[0;32mI (180773) TIME: Time: 14:30:25 Date: 28/08/2025[0m
+[0;32mI (181773) TIME: Time: 14:30:26 Date: 28/08/2025[0m
+[0;32mI (182773) TIME: Time: 14:30:27 Date: 28/08/2025[0m
+[0;32mI (183773) TIME: Time: 14:30:28 Date: 28/08/2025[0m
+[0;32mI (184773) TIME: Time: 14:30:29 Date: 28/08/2025[0m
+[0;32mI (185773) TIME: Time: 14:30:30 Date: 28/08/2025[0m
+[0;32mI (186773) TIME: Time: 14:30:31 Date: 28/08/2025[0m
+[0;32mI (187773) TIME: Time: 14:30:32 Date: 28/08/2025[0m
+[0;32mI (188773) TIME: Time: 14:30:33 Date: 28/08/2025[0m
+[0;32mI (189773) TIME: Time: 14:30:34 Date: 28/08/2025[0m
+[0;32mI (190773) TIME: Time: 14:30:35 Date: 28/08/2025[0m
+[0;32mI (191773) TIME: Time: 14:30:36 Date: 28/08/2025[0m
+[0;32mI (192773) TIME: Time: 14:30:37 Date: 28/08/2025[0m
+[0;32mI (193773) TIME: Time: 14:30:38 Date: 28/08/2025[0m
+[0;32mI (194773) TIME: Time: 14:30:39 Date: 28/08/2025[0m
+[0;32mI (195773) TIME: Time: 14:30:40 Date: 28/08/2025[0m
+[0;32mI (196773) TIME: Time: 14:30:41 Date: 28/08/2025[0m
+[0;32mI (197773) TIME: Time: 14:30:42 Date: 28/08/2025[0m
+[0;32mI (198773) TIME: Time: 14:30:43 Date: 28/08/2025[0m
+[0;32mI (199773) TIME: Time: 14:30:44 Date: 28/08/2025[0m
+[0;32mI (200773) TIME: Time: 14:30:45 Date: 28/08/2025[0m
+[0;32mI (201773) TIME: Time: 14:30:46 Date: 28/08/2025[0m
+[0;32mI (202773) TIME: Time: 14:30:47 Date: 28/08/2025[0m
+[0;32mI (203773) TIME: Time: 14:30:48 Date: 28/08/2025[0m
+[0;32mI (204773) TIME: Time: 14:30:49 Date: 28/08/2025[0m
+[0;32mI (205773) TIME: Time: 14:30:50 Date: 28/08/2025[0m
+[0;32mI (206773) TIME: Time: 14:30:51 Date: 28/08/2025[0m
+[0;32mI (207773) TIME: Time: 14:30:52 Date: 28/08/2025[0m
+[0;32mI (208773) TIME: Time: 14:30:53 Date: 28/08/2025[0m
+[0;32mI (209773) TIME: Time: 14:30:54 Date: 28/08/2025[0m
+[0;32mI (210773) TIME: Time: 14:30:55 Date: 28/08/2025[0m
+[0;32mI (211773) TIME: Time: 14:30:56 Date: 28/08/2025[0m
+[0;32mI (212773) TIME: Time: 14:30:57 Date: 28/08/2025[0m
+[0;32mI (213773) TIME: Time: 14:30:58 Date: 28/08/2025[0m
+[0;32mI (214773) TIME: Time: 14:30:59 Date: 28/08/2025[0m
+[0;32mI (215773) TIME: Time: 14:31:00 Date: 28/08/2025[0m
+[0;32mI (216773) TIME: Time: 14:31:01 Date: 28/08/2025[0m
+[0;32mI (217773) TIME: Time: 14:31:02 Date: 28/08/2025[0m
+[0;32mI (218773) TIME: Time: 14:31:03 Date: 28/08/2025[0m
+[0;32mI (219773) TIME: Time: 14:31:04 Date: 28/08/2025[0m
+[0;32mI (220773) TIME: Time: 14:31:05 Date: 28/08/2025[0m
+[0;32mI (221773) TIME: Time: 14:31:06 Date: 28/08/2025[0m
+[0;32mI (222773) TIME: Time: 14:31:07 Date: 28/08/2025[0m
+[0;32mI (223773) TIME: Time: 14:31:08 Date: 28/08/2025[0m
+[0;32mI (224773) TIME: Time: 14:31:09 Date: 28/08/2025[0m
+[0;32mI (225773) TIME: Time: 14:31:10 Date: 28/08/2025[0m
+[0;32mI (226773) TIME: Time: 14:31:11 Date: 28/08/2025[0m
+[0;32mI (227773) TIME: Time: 14:31:12 Date: 28/08/2025[0m
+[0;32mI (228773) TIME: Time: 14:31:13 Date: 28/08/2025[0m
+[0;32mI (229773) TIME: Time: 14:31:14 Date: 28/08/2025[0m
+[0;32mI (230773) TIME: Time: 14:31:15 Date: 28/08/2025[0m
+[0;32mI (231773) TIME: Time: 14:31:16 Date: 28/08/2025[0m
+[0;32mI (232773) TIME: Time: 14:31:17 Date: 28/08/2025[0m
+[0;32mI (233773) TIME: Time: 14:31:18 Date: 28/08/2025[0m
+[0;32mI (234773) TIME: Time: 14:31:19 Date: 28/08/2025[0m
+[0;32mI (235773) TIME: Time: 14:31:20 Date: 28/08/2025[0m
+[0;32mI (236773) TIME: Time: 14:31:21 Date: 28/08/2025[0m
+[0;32mI (237773) TIME: Time: 14:31:22 Date: 28/08/2025[0m
+[0;32mI (238773) TIME: Time: 14:31:23 Date: 28/08/2025[0m
+[0;32mI (239773) TIME: Time: 14:31:24 Date: 28/08/2025[0m
+[0;32mI (240773) TIME: Time: 14:31:25 Date: 28/08/2025[0m
+[0;32mI (241773) TIME: Time: 14:31:26 Date: 28/08/2025[0m
+[0;32mI (242773) TIME: Time: 14:31:27 Date: 28/08/2025[0m
+[0;32mI (243773) TIME: Time: 14:31:28 Date: 28/08/2025[0m
+[0;32mI (244773) TIME: Time: 14:31:29 Date: 28/08/2025[0m
+[0;32mI (245773) TIME: Time: 14:31:30 Date: 28/08/2025[0m
+[0;32mI (246773) TIME: Time: 14:31:31 Date: 28/08/2025[0m
+[0;32mI (247773) TIME: Time: 14:31:32 Date: 28/08/2025[0m
+[0;32mI (248773) TIME: Time: 14:31:33 Date: 28/08/2025[0m
+[0;32mI (249773) TIME: Time: 14:31:34 Date: 28/08/2025[0m
+[0;32mI (250773) TIME: Time: 14:31:35 Date: 28/08/2025[0m
+[0;32mI (251773) TIME: Time: 14:31:36 Date: 28/08/2025[0m
+[0;32mI (252773) TIME: Time: 14:31:37 Date: 28/08/2025[0m
+[0;32mI (253773) TIME: Time: 14:31:38 Date: 28/08/2025[0m
+[0;32mI (254773) TIME: Time: 14:31:39 Date: 28/08/2025[0m
+[0;32mI (255773) TIME: Time: 14:31:40 Date: 28/08/2025[0m
+[0;32mI (256773) TIME: Time: 14:31:41 Date: 28/08/2025[0m
+[0;32mI (257773) TIME: Time: 14:31:42 Date: 28/08/2025[0m
+[0;32mI (258773) TIME: Time: 14:31:43 Date: 28/08/2025[0m
+[0;32mI (259773) TIME: Time: 14:31:44 Date: 28/08/2025[0m
+[0;32mI (260773) TIME: Time: 14:31:45 Date: 28/08/2025[0m
+[0;32mI (261773) TIME: Time: 14:31:46 Date: 28/08/2025[0m
+[0;32mI (262773) TIME: Time: 14:31:47 Date: 28/08/2025[0m
+[0;32mI (263773) TIME: Time: 14:31:48 Date: 28/08/2025[0m
+[0;32mI (264773) TIME: Time: 14:31:49 Date: 28/08/2025[0m
+[0;32mI (265773) TIME: Time: 14:31:50 Date: 28/08/2025[0m
+[0;32mI (266773) TIME: Time: 14:31:51 Date: 28/08/2025[0m
+[0;32mI (267773) TIME: Time: 14:31:52 Date: 28/08/2025[0m
+[0;32mI (268773) TIME: Time: 14:31:53 Date: 28/08/2025[0m
+[0;32mI (269773) TIME: Time: 14:31:54 Date: 28/08/2025[0m
+[0;32mI (270773) TIME: Time: 14:31:55 Date: 28/08/2025[0m
+[0;32mI (271773) TIME: Time: 14:31:56 Date: 28/08/2025[0m
+[0;32mI (272773) TIME: Time: 14:31:57 Date: 28/08/2025[0m
+[0;32mI (273773) TIME: Time: 14:31:58 Date: 28/08/2025[0m
+[0;32mI (274773) TIME: Time: 14:31:59 Date: 28/08/2025[0m
+[0;32mI (275773) TIME: Time: 14:32:00 Date: 28/08/2025[0m
+[0;32mI (276773) TIME: Time: 14:32:01 Date: 28/08/2025[0m
+[0;32mI (277773) TIME: Time: 14:32:02 Date: 28/08/2025[0m
+[0;32mI (278773) TIME: Time: 14:32:03 Date: 28/08/2025[0m
+[0;32mI (279773) TIME: Time: 14:32:04 Date: 28/08/2025[0m
+[0;32mI (280773) TIME: Time: 14:32:05 Date: 28/08/2025[0m
+[0;32mI (281773) TIME: Time: 14:32:06 Date: 28/08/2025[0m
+[0;32mI (282773) TIME: Time: 14:32:07 Date: 28/08/2025[0m
+[0;32mI (283773) TIME: Time: 14:32:08 Date: 28/08/2025[0m
+[0;32mI (284773) TIME: Time: 14:32:09 Date: 28/08/2025[0m
+[0;32mI (285773) TIME: Time: 14:32:10 Date: 28/08/2025[0m
+[0;32mI (286773) TIME: Time: 14:32:11 Date: 28/08/2025[0m
+[0;32mI (287773) TIME: Time: 14:32:12 Date: 28/08/2025[0m
+[0;32mI (288773) TIME: Time: 14:32:13 Date: 28/08/2025[0m
+[0;32mI (289773) TIME: Time: 14:32:14 Date: 28/08/2025[0m
+[0;32mI (290773) TIME: Time: 14:32:15 Date: 28/08/2025[0m
+[0;32mI (291773) TIME: Time: 14:32:16 Date: 28/08/2025[0m
+[0;32mI (292773) TIME: Time: 14:32:17 Date: 28/08/2025[0m
+[0;32mI (293773) TIME: Time: 14:32:18 Date: 28/08/2025[0m
+[0;32mI (294773) TIME: Time: 14:32:19 Date: 28/08/2025[0m
+[0;32mI (295773) TIME: Time: 14:32:20 Date: 28/08/2025[0m
+[0;32mI (296773) TIME: Time: 14:32:21 Date: 28/08/2025[0m
+[0;32mI (297773) TIME: Time: 14:32:22 Date: 28/08/2025[0m
+[0;32mI (298773) TIME: Time: 14:32:23 Date: 28/08/2025[0m
+[0;32mI (299773) TIME: Time: 14:32:24 Date: 28/08/2025[0m
+[0;32mI (300773) TIME: Time: 14:32:25 Date: 28/08/2025[0m
+[0;32mI (301773) TIME: Time: 14:32:26 Date: 28/08/2025[0m
+[0;32mI (302773) TIME: Time: 14:32:27 Date: 28/08/2025[0m
+[0;32mI (303773) TIME: Time: 14:32:28 Date: 28/08/2025[0m
+[0;32mI (304773) TIME: Time: 14:32:29 Date: 28/08/2025[0m
+[0;32mI (305773) TIME: Time: 14:32:30 Date: 28/08/2025[0m
+[0;32mI (306773) TIME: Time: 14:32:31 Date: 28/08/2025[0m
+[0;32mI (307773) TIME: Time: 14:32:32 Date: 28/08/2025[0m
+[0;32mI (308773) TIME: Time: 14:32:33 Date: 28/08/2025[0m
+[0;32mI (309773) TIME: Time: 14:32:34 Date: 28/08/2025[0m
+[0;32mI (310773) TIME: Time: 14:32:35 Date: 28/08/2025[0m
+[0;32mI (311773) TIME: Time: 14:32:36 Date: 28/08/2025[0m
+[0;32mI (312773) TIME: Time: 14:32:37 Date: 28/08/2025[0m
+[0;32mI (313773) TIME: Time: 14:32:38 Date: 28/08/2025[0m
+[0;32mI (314773) TIME: Time: 14:32:39 Date: 28/08/2025[0m
+[0;32mI (315773) TIME: Time: 14:32:40 Date: 28/08/2025[0m
+[0;32mI (316773) TIME: Time: 14:32:41 Date: 28/08/2025[0m
+[0;32mI (317773) TIME: Time: 14:32:42 Date: 28/08/2025[0m
+[0;32mI (318773) TIME: Time: 14:32:43 Date: 28/08/2025[0m
+[0;32mI (319773) TIME: Time: 14:32:44 Date: 28/08/2025[0m
+[0;32mI (320773) TIME: Time: 14:32:45 Date: 28/08/2025[0m
+[0;32mI (321773) TIME: Time: 14:32:46 Date: 28/08/2025[0m
+[0;32mI (322773) TIME: Time: 14:32:47 Date: 28/08/2025[0m
+[0;32mI (323773) TIME: Time: 14:32:48 Date: 28/08/2025[0m
+[0;32mI (324773) TIME: Time: 14:32:49 Date: 28/08/2025[0m
+[0;32mI (325773) TIME: Time: 14:32:50 Date: 28/08/2025[0m
+[0;32mI (326773) TIME: Time: 14:32:51 Date: 28/08/2025[0m
+[0;32mI (327773) TIME: Time: 14:32:52 Date: 28/08/2025[0m
+[0;32mI (328773) TIME: Time: 14:32:53 Date: 28/08/2025[0m
+[0;32mI (329773) TIME: Time: 14:32:54 Date: 28/08/2025[0m
+[0;32mI (330773) TIME: Time: 14:32:55 Date: 28/08/2025[0m
+[0;32mI (331773) TIME: Time: 14:32:56 Date: 28/08/2025[0m
+[0;32mI (332773) TIME: Time: 14:32:57 Date: 28/08/2025[0m
+[0;32mI (333773) TIME: Time: 14:32:58 Date: 28/08/2025[0m
+[0;32mI (334773) TIME: Time: 14:32:59 Date: 28/08/2025[0m
+[0;32mI (335773) TIME: Time: 14:33:00 Date: 28/08/2025[0m
+[0;32mI (336773) TIME: Time: 14:33:01 Date: 28/08/2025[0m
+[0;32mI (337773) TIME: Time: 14:33:02 Date: 28/08/2025[0m
+[0;32mI (338773) TIME: Time: 14:33:03 Date: 28/08/2025[0m
+[0;32mI (339773) TIME: Time: 14:33:04 Date: 28/08/2025[0m
+[0;32mI (340773) TIME: Time: 14:33:05 Date: 28/08/2025[0m
+[0;32mI (341773) TIME: Time: 14:33:06 Date: 28/08/2025[0m
+[0;32mI (342773) TIME: Time: 14:33:07 Date: 28/08/2025[0m
+[0;32mI (343773) TIME: Time: 14:33:08 Date: 28/08/2025[0m
+[0;32mI (344773) TIME: Time: 14:33:09 Date: 28/08/2025[0m
+[0;32mI (345773) TIME: Time: 14:33:10 Date: 28/08/2025[0m
+���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p p�� p��� �p���|p�|p ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 28 2025 15:43:33[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09c5ch ( 40028) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=00019c84 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (102) esp_image: segment 2: paddr=00019cac vaddr=3ffb0000 size=022d8h (  8920) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001bf8c vaddr=40080000 size=0408ch ( 16524) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1806ch ( 98412) map[0m
+[0;32mI (154) esp_image: segment 5: paddr=00038094 vaddr=4008408c size=0a60ch ( 42508) load[0m
+[0;32mI (178) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (178) boot: Disabling RNG early entropy source...[0m
+[0;32mI (188) cpu_start: Multicore app[0m
+[0;32mI (197) cpu_start: Pro cpu start user code[0m
+[0;32mI (197) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (197) app_init: Application information:[0m
+[0;32mI (197) app_init: Project name:     blink[0m
+[0;32mI (201) app_init: App version:      1[0m
+[0;32mI (204) app_init: Compile time:     Aug 28 2025 15:43:18[0m
+[0;32mI (209) app_init: ELF file SHA256:  2e7b3433d...[0m
+[0;32mI (213) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (217) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (221) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (225) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (229) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (240) heap_init: At 3FFB2B68 len 0002D498 (181 KiB): DRAM[0m
+[0;32mI (245) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (251) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (256) heap_init: At 4008E698 len 00011968 (70 KiB): IRAM[0m
+[0;33mW (262) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (272) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (291) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (301) main_task: Started on CPU0[0m
+[0;32mI (311) main_task: Calling app_main()[0m
+[0;32mI (311) RTC: I2C RTC initialized[0m
+[1;31mE (311) RTC: I2C read failed: -1[0m
+[0;32mI (311) MAIN: RTC time: RTC read error[0m
+[0;32mI (311) UART_SEND: UART sent: RTC read error[0m
+[1;31mE (2311) RTC: I2C read failed: -1[0m
+[0;32mI (2311) MAIN: RTC time: RTC read error[0m
+[0;32mI (2311) UART_SEND: UART sent: RTC read error[0m
+[1;31mE (4311) RTC: I2C read failed: -1[0m
+[0;32mI (4311) MAIN: RTC time: RTC read error[0m
+[0;32mI (4311) UART_SEND: UART sent: RTC read error[0m
+[1;31mE (6311) RTC: I2C read failed: -1[0m
+[0;32mI (6311) MAIN: RTC time: RTC read error[0m
+[0;32mI (6311) UART_SEND: UART sent: RTC read error[0m

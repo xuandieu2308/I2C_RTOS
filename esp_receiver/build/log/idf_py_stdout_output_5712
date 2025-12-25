@@ -1,0 +1,666 @@
+Command: E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM8 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\I2C_RTOS\esp_receiver\build\esp_receiver.elf E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\I2C_RTOS\esp_receiver\build\bootloader\bootloader.elf --force-color -m 'E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM8'
+32: SPI Speed      : 40MHz
+I (37�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 28 2025 09:25:35[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ad38h ( 44344) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001ad60 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001ad88 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d178 vaddr=40080000 size=02ea0h ( 11936) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=15d54h ( 89428) map[0m
+[0;32mI (153) esp_image: segment 5: paddr=00035d7c vaddr=40082ea0 size=0b1b0h ( 45488) load[0m
+[0;32mI (178) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (178) boot: Disabling RNG early entropy source...[0m
+[0;32mI (188) cpu_start: Multicore app[0m
+[0;32mI (197) cpu_start: Pro cpu start user code[0m
+[0;32mI (197) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (197) app_init: Application information:[0m
+[0;32mI (197) app_init: Project name:     esp_receiver[0m
+[0;32mI (201) app_init: App version:      v5.5-dirty[0m
+[0;32mI (205) app_init: Compile time:     Aug 28 2025 09:25:22[0m
+[0;32mI (210) app_init: ELF file SHA256:  145bdd2fb...[0m
+[0;32mI (215) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB2CC0 len 0002D340 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008E050 len 00011FB0 (71 KiB): IRAM[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (267) spi_flash: flash io: dio[0m
+[0;33mW (270) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (293) main_task: Calling app_main()[0m
+[0;32mI (553) UART: So byte nhan duoc: 7[0m
+Time: 14:21:58 Date: 28/08/2025
+[0;32mI (553) main_task: Returned from app_main()[0m
+[0;32mI (1553) UART: So byte nhan duoc: 0[0m
+[0;32mI (1553) UART: [WARN] Chua nhan duoc du lieu UART trong 1s![0m
+Time: 00:00:00 Date: 00/00/0000
+[0;32mI (2553) UART: So byte nhan duoc: 7[0m
+Time: 14:21:59 Date: 28/08/2025
+[0;32mI (3553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:00 Date: 28/08/2025
+[0;32mI (4553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:01 Date: 28/08/2025
+[0;32mI (5553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:02 Date: 28/08/2025
+[0;32mI (6553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:03 Date: 28/08/2025
+[0;32mI (7553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:04 Date: 28/08/2025
+[0;32mI (8553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:05 Date: 28/08/2025
+[0;32mI (9553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:06 Date: 28/08/2025
+[0;32mI (10553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:07 Date: 28/08/2025
+[0;32mI (11553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:08 Date: 28/08/2025
+[0;32mI (12553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:09 Date: 28/08/2025
+[0;32mI (13553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:10 Date: 28/08/2025
+[0;32mI (14553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:11 Date: 28/08/2025
+[0;32mI (15553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:12 Date: 28/08/2025
+[0;32mI (16553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:13 Date: 28/08/2025
+[0;32mI (17553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:14 Date: 28/08/2025
+[0;32mI (18553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:15 Date: 28/08/2025
+[0;32mI (19553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:16 Date: 28/08/2025
+[0;32mI (20553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:17 Date: 28/08/2025
+[0;32mI (21553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:18 Date: 28/08/2025
+[0;32mI (22553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:19 Date: 28/08/2025
+[0;32mI (23553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:20 Date: 28/08/2025
+[0;32mI (24553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:21 Date: 28/08/2025
+[0;32mI (25553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:22 Date: 28/08/2025
+[0;32mI (26553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:23 Date: 28/08/2025
+[0;32mI (27553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:24 Date: 28/08/2025
+[0;32mI (28553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:25 Date: 28/08/2025
+[0;32mI (29553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:26 Date: 28/08/2025
+[0;32mI (30553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:27 Date: 28/08/2025
+[0;32mI (31553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:28 Date: 28/08/2025
+[0;32mI (32553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:29 Date: 28/08/2025
+[0;32mI (33553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:30 Date: 28/08/2025
+[0;32mI (34553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:31 Date: 28/08/2025
+[0;32mI (35553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:32 Date: 28/08/2025
+[0;32mI (36553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:33 Date: 28/08/2025
+[0;32mI (37553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:34 Date: 28/08/2025
+[0;32mI (38553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:35 Date: 28/08/2025
+[0;32mI (39553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:36 Date: 28/08/2025
+[0;32mI (40553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:37 Date: 28/08/2025
+[0;32mI (41553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:38 Date: 28/08/2025
+[0;32mI (42553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:39 Date: 28/08/2025
+[0;32mI (43553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:40 Date: 28/08/2025
+[0;32mI (44553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:41 Date: 28/08/2025
+[0;32mI (45553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:42 Date: 28/08/2025
+[0;32mI (46553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:43 Date: 28/08/2025
+[0;32mI (47553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:44 Date: 28/08/2025
+[0;32mI (48553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:45 Date: 28/08/2025
+[0;32mI (49553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:46 Date: 28/08/2025
+[0;32mI (50553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:47 Date: 28/08/2025
+[0;32mI (51553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:48 Date: 28/08/2025
+[0;32mI (52553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:49 Date: 28/08/2025
+[0;32mI (53553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:50 Date: 28/08/2025
+[0;32mI (54553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:51 Date: 28/08/2025
+[0;32mI (55553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:52 Date: 28/08/2025
+[0;32mI (56553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:53 Date: 28/08/2025
+[0;32mI (57553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:54 Date: 28/08/2025
+[0;32mI (58553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:55 Date: 28/08/2025
+[0;32mI (59553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:56 Date: 28/08/2025
+[0;32mI (60553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:57 Date: 28/08/2025
+[0;32mI (61553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:58 Date: 28/08/2025
+[0;32mI (62553) UART: So byte nhan duoc: 7[0m
+Time: 14:22:59 Date: 28/08/2025
+[0;32mI (63553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:00 Date: 28/08/2025
+[0;32mI (64553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:01 Date: 28/08/2025
+[0;32mI (65553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:02 Date: 28/08/2025
+[0;32mI (66553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:03 Date: 28/08/2025
+[0;32mI (67553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:04 Date: 28/08/2025
+[0;32mI (68553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:05 Date: 28/08/2025
+[0;32mI (69553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:06 Date: 28/08/2025
+[0;32mI (70553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:07 Date: 28/08/2025
+[0;32mI (71553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:08 Date: 28/08/2025
+[0;32mI (72553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:09 Date: 28/08/2025
+[0;32mI (73553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:10 Date: 28/08/2025
+[0;32mI (74553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:11 Date: 28/08/2025
+[0;32mI (75553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:12 Date: 28/08/2025
+[0;32mI (76553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:13 Date: 28/08/2025
+[0;32mI (77553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:14 Date: 28/08/2025
+[0;32mI (78553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:15 Date: 28/08/2025
+[0;32mI (79553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:16 Date: 28/08/2025
+[0;32mI (80553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:17 Date: 28/08/2025
+[0;32mI (81553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:18 Date: 28/08/2025
+[0;32mI (82553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:19 Date: 28/08/2025
+[0;32mI (83553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:20 Date: 28/08/2025
+[0;32mI (84553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:21 Date: 28/08/2025
+[0;32mI (85553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:22 Date: 28/08/2025
+[0;32mI (86553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:23 Date: 28/08/2025
+[0;32mI (87553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:24 Date: 28/08/2025
+[0;32mI (88553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:25 Date: 28/08/2025
+[0;32mI (89553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:26 Date: 28/08/2025
+[0;32mI (90553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:27 Date: 28/08/2025
+[0;32mI (91553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:28 Date: 28/08/2025
+[0;32mI (92553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:29 Date: 28/08/2025
+[0;32mI (93553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:30 Date: 28/08/2025
+[0;32mI (94553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:31 Date: 28/08/2025
+[0;32mI (95553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:32 Date: 28/08/2025
+[0;32mI (96553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:33 Date: 28/08/2025
+[0;32mI (97553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:34 Date: 28/08/2025
+[0;32mI (98553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:35 Date: 28/08/2025
+[0;32mI (99553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:36 Date: 28/08/2025
+[0;32mI (100553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:37 Date: 28/08/2025
+[0;32mI (101553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:38 Date: 28/08/2025
+[0;32mI (102553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:39 Date: 28/08/2025
+[0;32mI (103553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:40 Date: 28/08/2025
+[0;32mI (104553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:41 Date: 28/08/2025
+[0;32mI (105553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:42 Date: 28/08/2025
+[0;32mI (106553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:43 Date: 28/08/2025
+[0;32mI (107553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:44 Date: 28/08/2025
+[0;32mI (108553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:45 Date: 28/08/2025
+[0;32mI (109553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:46 Date: 28/08/2025
+[0;32mI (110553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:47 Date: 28/08/2025
+[0;32mI (111553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:48 Date: 28/08/2025
+[0;32mI (112553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:49 Date: 28/08/2025
+[0;32mI (113553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:50 Date: 28/08/2025
+[0;32mI (114553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:51 Date: 28/08/2025
+[0;32mI (115553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:52 Date: 28/08/2025
+[0;32mI (116553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:53 Date: 28/08/2025
+[0;32mI (117553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:54 Date: 28/08/2025
+[0;32mI (118553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:55 Date: 28/08/2025
+[0;32mI (119553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:56 Date: 28/08/2025
+[0;32mI (120553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:57 Date: 28/08/2025
+[0;32mI (121553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:58 Date: 28/08/2025
+[0;32mI (122553) UART: So byte nhan duoc: 7[0m
+Time: 14:23:59 Date: 28/08/2025
+[0;32mI (123553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:00 Date: 28/08/2025
+[0;32mI (124553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:01 Date: 28/08/2025
+[0;32mI (125553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:02 Date: 28/08/2025
+[0;32mI (126553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:03 Date: 28/08/2025
+[0;32mI (127553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:04 Date: 28/08/2025
+[0;32mI (128553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:05 Date: 28/08/2025
+[0;32mI (129553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:06 Date: 28/08/2025
+[0;32mI (130553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:07 Date: 28/08/2025
+[0;32mI (131553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:08 Date: 28/08/2025
+[0;32mI (132553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:09 Date: 28/08/2025
+[0;32mI (133553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:10 Date: 28/08/2025
+[0;32mI (134553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:11 Date: 28/08/2025
+[0;32mI (135553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:12 Date: 28/08/2025
+[0;32mI (136553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:13 Date: 28/08/2025
+[0;32mI (137553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:14 Date: 28/08/2025
+[0;32mI (138553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:15 Date: 28/08/2025
+[0;32mI (139553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:16 Date: 28/08/2025
+[0;32mI (140553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:17 Date: 28/08/2025
+[0;32mI (141553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:18 Date: 28/08/2025
+[0;32mI (142553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:19 Date: 28/08/2025
+[0;32mI (143553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:20 Date: 28/08/2025
+[0;32mI (144553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:21 Date: 28/08/2025
+[0;32mI (145553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:22 Date: 28/08/2025
+[0;32mI (146553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:23 Date: 28/08/2025
+[0;32mI (147553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:24 Date: 28/08/2025
+[0;32mI (148553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:25 Date: 28/08/2025
+[0;32mI (149553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:26 Date: 28/08/2025
+[0;32mI (150553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:27 Date: 28/08/2025
+[0;32mI (151553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:28 Date: 28/08/2025
+[0;32mI (152553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:29 Date: 28/08/2025
+[0;32mI (153553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:30 Date: 28/08/2025
+[0;32mI (154553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:31 Date: 28/08/2025
+[0;32mI (155553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:32 Date: 28/08/2025
+[0;32mI (156553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:33 Date: 28/08/2025
+[0;32mI (157553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:34 Date: 28/08/2025
+[0;32mI (158553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:35 Date: 28/08/2025
+[0;32mI (159553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:36 Date: 28/08/2025
+[0;32mI (160553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:37 Date: 28/08/2025
+[0;32mI (161553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:38 Date: 28/08/2025
+[0;32mI (162553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:39 Date: 28/08/2025
+[0;32mI (163553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:40 Date: 28/08/2025
+[0;32mI (164553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:41 Date: 28/08/2025
+[0;32mI (165553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:42 Date: 28/08/2025
+[0;32mI (166553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:43 Date: 28/08/2025
+[0;32mI (167553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:44 Date: 28/08/2025
+[0;32mI (168553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:45 Date: 28/08/2025
+[0;32mI (169553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:46 Date: 28/08/2025
+[0;32mI (170553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:47 Date: 28/08/2025
+[0;32mI (171553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:48 Date: 28/08/2025
+[0;32mI (172553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:49 Date: 28/08/2025
+[0;32mI (173553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:50 Date: 28/08/2025
+[0;32mI (174553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:51 Date: 28/08/2025
+[0;32mI (175553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:52 Date: 28/08/2025
+[0;32mI (176553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:53 Date: 28/08/2025
+[0;32mI (177553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:54 Date: 28/08/2025
+[0;32mI (178553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:55 Date: 28/08/2025
+[0;32mI (179553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:56 Date: 28/08/2025
+[0;32mI (180553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:57 Date: 28/08/2025
+[0;32mI (181553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:58 Date: 28/08/2025
+[0;32mI (182553) UART: So byte nhan duoc: 7[0m
+Time: 14:24:59 Date: 28/08/2025
+[0;32mI (183553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:00 Date: 28/08/2025
+[0;32mI (184553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:01 Date: 28/08/2025
+[0;32mI (185553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:02 Date: 28/08/2025
+[0;32mI (186553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:03 Date: 28/08/2025
+[0;32mI (187553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:04 Date: 28/08/2025
+[0;32mI (188553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:05 Date: 28/08/2025
+[0;32mI (189553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:06 Date: 28/08/2025
+[0;32mI (190553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:07 Date: 28/08/2025
+[0;32mI (191553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:08 Date: 28/08/2025
+[0;32mI (192553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:09 Date: 28/08/2025
+[0;32mI (193553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:10 Date: 28/08/2025
+[0;32mI (194553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:11 Date: 28/08/2025
+[0;32mI (195553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:12 Date: 28/08/2025
+[0;32mI (196553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:13 Date: 28/08/2025
+[0;32mI (197553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:14 Date: 28/08/2025
+[0;32mI (198553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:15 Date: 28/08/2025
+[0;32mI (199553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:16 Date: 28/08/2025
+[0;32mI (200553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:17 Date: 28/08/2025
+[0;32mI (201553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:18 Date: 28/08/2025
+[0;32mI (202553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:19 Date: 28/08/2025
+[0;32mI (203553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:20 Date: 28/08/2025
+[0;32mI (204553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:21 Date: 28/08/2025
+[0;32mI (205553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:22 Date: 28/08/2025
+[0;32mI (206553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:23 Date: 28/08/2025
+[0;32mI (207553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:24 Date: 28/08/2025
+[0;32mI (208553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:25 Date: 28/08/2025
+[0;32mI (209553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:26 Date: 28/08/2025
+[0;32mI (210553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:27 Date: 28/08/2025
+[0;32mI (211553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:28 Date: 28/08/2025
+[0;32mI (212553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:29 Date: 28/08/2025
+[0;32mI (213553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:30 Date: 28/08/2025
+[0;32mI (214553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:31 Date: 28/08/2025
+[0;32mI (215553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:32 Date: 28/08/2025
+[0;32mI (216553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:33 Date: 28/08/2025
+[0;32mI (217553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:34 Date: 28/08/2025
+[0;32mI (218553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:35 Date: 28/08/2025
+[0;32mI (219553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:36 Date: 28/08/2025
+[0;32mI (220553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:37 Date: 28/08/2025
+[0;32mI (221553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:38 Date: 28/08/2025
+[0;32mI (222553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:39 Date: 28/08/2025
+[0;32mI (223553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:40 Date: 28/08/2025
+[0;32mI (224553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:41 Date: 28/08/2025
+[0;32mI (225553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:42 Date: 28/08/2025
+[0;32mI (226553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:43 Date: 28/08/2025
+[0;32mI (227553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:44 Date: 28/08/2025
+[0;32mI (228553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:45 Date: 28/08/2025
+[0;32mI (229553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:46 Date: 28/08/2025
+[0;32mI (230553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:47 Date: 28/08/2025
+[0;32mI (231553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:48 Date: 28/08/2025
+[0;32mI (232553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:49 Date: 28/08/2025
+[0;32mI (233553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:50 Date: 28/08/2025
+[0;32mI (234553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:51 Date: 28/08/2025
+[0;32mI (235553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:52 Date: 28/08/2025
+[0;32mI (236553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:53 Date: 28/08/2025
+[0;32mI (237553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:54 Date: 28/08/2025
+[0;32mI (238553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:55 Date: 28/08/2025
+[0;32mI (239553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:56 Date: 28/08/2025
+[0;32mI (240553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:57 Date: 28/08/2025
+[0;32mI (241553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:58 Date: 28/08/2025
+[0;32mI (242553) UART: So byte nhan duoc: 7[0m
+Time: 14:25:59 Date: 28/08/2025
+[0;32mI (243553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:00 Date: 28/08/2025
+[0;32mI (244553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:01 Date: 28/08/2025
+[0;32mI (245553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:02 Date: 28/08/2025
+[0;32mI (246553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:03 Date: 28/08/2025
+[0;32mI (247553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:04 Date: 28/08/2025
+[0;32mI (248553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:05 Date: 28/08/2025
+[0;32mI (249553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:06 Date: 28/08/2025
+[0;32mI (250553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:07 Date: 28/08/2025
+[0;32mI (251553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:08 Date: 28/08/2025
+[0;32mI (252553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:09 Date: 28/08/2025
+[0;32mI (253553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:10 Date: 28/08/2025
+[0;32mI (254553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:11 Date: 28/08/2025
+[0;32mI (255553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:12 Date: 28/08/2025
+[0;32mI (256553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:13 Date: 28/08/2025
+[0;32mI (257553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:14 Date: 28/08/2025
+[0;32mI (258553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:15 Date: 28/08/2025
+[0;32mI (259553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:16 Date: 28/08/2025
+[0;32mI (260553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:17 Date: 28/08/2025
+[0;32mI (261553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:18 Date: 28/08/2025
+[0;32mI (262553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:19 Date: 28/08/2025
+[0;32mI (263553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:20 Date: 28/08/2025
+[0;32mI (264553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:21 Date: 28/08/2025
+[0;32mI (265553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:22 Date: 28/08/2025
+[0;32mI (266553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:23 Date: 28/08/2025
+[0;32mI (267553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:24 Date: 28/08/2025
+[0;32mI (268553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:25 Date: 28/08/2025
+[0;32mI (269553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:26 Date: 28/08/2025
+[0;32mI (270553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:27 Date: 28/08/2025
+[0;32mI (271553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:28 Date: 28/08/2025
+[0;32mI (272553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:29 Date: 28/08/2025
+[0;32mI (273553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:30 Date: 28/08/2025
+[0;32mI (274553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:31 Date: 28/08/2025
+[0;32mI (275553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:32 Date: 28/08/2025
+[0;32mI (276553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:33 Date: 28/08/2025
+[0;32mI (277553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:34 Date: 28/08/2025
+[0;32mI (278553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:35 Date: 28/08/2025
+[0;32mI (279553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:36 Date: 28/08/2025
+[0;32mI (280553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:37 Date: 28/08/2025
+[0;32mI (281553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:38 Date: 28/08/2025
+[0;32mI (282553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:39 Date: 28/08/2025
+[0;32mI (283553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:40 Date: 28/08/2025
+[0;32mI (284553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:41 Date: 28/08/2025
+[0;32mI (285553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:42 Date: 28/08/2025
+[0;32mI (286553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:43 Date: 28/08/2025
+[0;32mI (287553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:44 Date: 28/08/2025
+[0;32mI (288553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:45 Date: 28/08/2025
+[0;32mI (289553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:46 Date: 28/08/2025
+[0;32mI (290553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:47 Date: 28/08/2025
+[0;32mI (291553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:48 Date: 28/08/2025
+[0;32mI (292553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:49 Date: 28/08/2025
+[0;32mI (293553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:50 Date: 28/08/2025
+[0;32mI (294553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:51 Date: 28/08/2025
+[0;32mI (295553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:52 Date: 28/08/2025
+[0;32mI (296553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:53 Date: 28/08/2025
+[0;32mI (297553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:54 Date: 28/08/2025
+[0;32mI (298553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:55 Date: 28/08/2025
+[0;32mI (299553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:56 Date: 28/08/2025
+[0;32mI (300553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:57 Date: 28/08/2025
+[0;32mI (301553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:58 Date: 28/08/2025
+[0;32mI (302553) UART: So byte nhan duoc: 7[0m
+Time: 14:26:59 Date: 28/08/2025

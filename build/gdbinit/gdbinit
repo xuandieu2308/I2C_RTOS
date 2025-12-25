@@ -1,0 +1,2 @@
+source E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/I2C_RTOS/build/gdbinit/symbols
+source E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/I2C_RTOS/build/gdbinit/connect
